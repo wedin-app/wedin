@@ -29,24 +29,24 @@ const config: Config = {
         },
         secondary: {
           100: "#E7E7E7",
-          400: "#797979",
+          400: "#71717A",
           500: "#595959",
         },
         gray: {
           100: "#F3F4F6",
           200: "#C3C3C3",
-          300: "#818181",
+          300: "#71717A",
           500: "#E0E0E0",
-          600: "#F2F2F2",
+          600: "#F4F4F5",
         },
         text: {
-          primary: "#1A1A1A",
-          secondary: "#595959",
+          primary: "#11181C",
+          secondary: "#09090B",
           tertiary: "#696969",
         },
         border: {
-          default: "#E0E0E0",
-          secondary: "#B4B4B4",
+          default: "#E4E4E7",
+          secondary: "#DBDBDB",
         },
         background: {
           primary: "#444444",
