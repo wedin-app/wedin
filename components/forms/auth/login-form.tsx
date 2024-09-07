@@ -16,6 +16,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { IoEyeOffOutline, IoEyeOutline } from 'react-icons/io5';
+import { Button } from '@/components/ui/button';
 import type { z } from 'zod';
 
 export default function LoginForm() {
@@ -66,9 +67,9 @@ export default function LoginForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(handleLogin)}
-        className="flex flex-col gap-8"
+        className="flex flex-col gap-8 w-full max-w-xl"
       >
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
             <FormField
               control={form.control}
@@ -121,16 +122,20 @@ export default function LoginForm() {
               )}
             />
           </div> */}
+
+          <Button variant="login" >
+            Iniciar sesión
+          </Button>
         </div>
 
-        <div className="flex flex-col gap-2">
+        {/* <div className="flex flex-col gap-2">
           <Link
             href="/password-reset"
             className="flex justify-start text-secondaryTextColor"
           >
             <span className="text-indigo-600">Se me olvidó la contraseña</span>
           </Link>
-        </div>
+        </div> */}
       </form>
     </Form>
   );

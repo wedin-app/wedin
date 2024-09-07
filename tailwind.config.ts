@@ -51,6 +51,7 @@ const config: Config = {
         background: {
           primary: "#444444",
           secondary: "#E7E7E7",
+          tertiary: "#435E41",
         },
         error: "#D32F2F",
         success: "#388E3C",
