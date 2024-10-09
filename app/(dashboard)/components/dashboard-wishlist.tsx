@@ -1,4 +1,3 @@
-import { FaCheck } from 'react-icons/fa6';
 import { Button } from '@/components/ui/button';
 import EmptyState from '@/components/common/empty-state';
 import { IoAdd } from 'react-icons/io5';
