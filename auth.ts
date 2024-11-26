@@ -1,7 +1,7 @@
 import { getUserByEmail, updateVerifiedOn } from '@/actions/data/user';
 import NextAuth, { type DefaultSession } from 'next-auth';
 import { JWT } from 'next-auth/jwt';
-import authOptions from './auth.config';
+import {authOptions} from './auth.config';
 
 export type ErrorResponse = {
   error: string;

@@ -11,6 +11,7 @@ import { auth } from '@/auth';
 
 export async function middleware(request: NextRequest) {
   const session = await auth();
+  console.log('session', session);
   const { nextUrl } = request;
 
   const isLoggedIn = !!session?.user;
@@ -24,6 +25,7 @@ export async function middleware(request: NextRequest) {
   const isAuthRoute = authRoutes.includes(nextUrl.pathname);
   const isProtectedRoute = protectedRoutes.includes(nextUrl.pathname);
   const isOnboardingRoute = onboardingRoute.includes(nextUrl.pathname);
+
 
   if (isApiAuthRoute) {
     return;
