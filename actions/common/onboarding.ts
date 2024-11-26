@@ -248,6 +248,7 @@ export const updateUserOnboardedStepFive = async () => {
         id: session.user.id,
       },
       data: {
+        onboardingStep: 6,
         isOnboarded: true,
       },
     });

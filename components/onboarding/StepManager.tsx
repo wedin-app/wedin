@@ -1,6 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import type { User } from '@prisma/client';
 import OnboardingStepOne from '@/components/onboarding/StepOne';
 import OnboardingStepTwo from '@/components/onboarding/StepTwo';
