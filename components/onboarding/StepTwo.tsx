@@ -32,7 +32,6 @@ export default function OnboardingStepTwo() {
     }
   }, []);
 
-
   const form = useForm<z.infer<typeof StepTwoSchema>>({
     resolver: zodResolver(StepTwoSchema),
     mode: 'all',
@@ -41,10 +40,10 @@ export default function OnboardingStepTwo() {
       lastName: '',
       partnerName: '',
       partnerLastName: '',
-      eventType: eventType || EventType.WEDDING,
+      eventType: eventType,
     },
   });
-
+  
   const {
     formState: { isDirty, isValid },
   } = form;

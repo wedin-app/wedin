@@ -15,7 +15,7 @@ export const StepTwoSchema = z
       .max(255, { message: 'Apellido muy largo' }),
     partnerName: z.string().optional(),
     partnerLastName: z.string().optional(),
-    eventType: z.nativeEnum(EventType),
+    eventType: z.nativeEnum(EventType).optional(),
   })
   .superRefine((data, ctx) => {
     // Check if the eventType is WEDDING
