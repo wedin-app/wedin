@@ -6,7 +6,7 @@ import OnboardingStepTwo from '@/components/onboarding/StepTwo';
 import OnboardingStepThree from '@/components/onboarding/StepThree';
 import OnboardingStepFour from '@/components/onboarding/StepFour';
 import OnboardingStepFive from '@/components/onboarding/StepFive';
-import StepSix from '@/components/onboarding/step-six';
+import OnboardingStepSix from '@/components/onboarding/StepSixAnimation';
 
 type OnboardingStepManagerProps = {
   currentUser: User;
@@ -24,7 +24,7 @@ export default function OnboardingStepManager({
       {currentPage === 3 && <OnboardingStepThree />}
       {currentPage === 4 && <OnboardingStepFour />}
       {currentPage === 5 && <OnboardingStepFive />}
-      {currentPage === 6 && <StepSix />}
+      {currentPage === 6 && <OnboardingStepSix />}
     </>
   );
 }

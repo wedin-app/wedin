@@ -220,6 +220,7 @@ export const updateEventDateStepFour = async (
       },
       data: {
         onboardingStep: 5,
+        isOnboarded: true,
       },
     });
   } catch (error) {
@@ -230,6 +231,7 @@ export const updateEventDateStepFour = async (
   // Revalidate cache paths after a successful operation
   try {
     revalidatePath('/onboarding');
+    revalidatePath('/dashboard');
   } catch (revalidationError) {
     console.error('Error revalidating cache:', revalidationError);
   }
@@ -260,6 +262,7 @@ export const updateUserOnboardedStepFive = async () => {
   // Revalidate cache paths after a successful operation
   try {
     revalidatePath('/onboarding');
+    revalidatePath('/dashboard');
   } catch (revalidationError) {
     console.error('Error revalidating cache:', revalidationError);
   }
