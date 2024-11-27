@@ -13,6 +13,7 @@ export default auth(req => {
 
   const isLoggedIn = !!req.auth?.user;
   const isOnboarded = isLoggedIn ? req.auth?.user.isOnboarded : false;
+  console.log('isOnboarded', isOnboarded);
   const isAdmin = isLoggedIn ? req.auth?.user.role === 'ADMIN' : false;
   const isExistingUser = isLoggedIn ? req.auth?.user.isExistingUser : false;
 
