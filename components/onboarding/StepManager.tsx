@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import type { User } from '@prisma/client';
 import OnboardingStepOne from '@/components/onboarding/StepOne';
 import OnboardingStepTwo from '@/components/onboarding/StepTwo';
@@ -15,16 +16,22 @@ type OnboardingStepManagerProps = {
 export default function OnboardingStepManager({
   currentUser,
 }: OnboardingStepManagerProps) {
-  const currentPage = currentUser?.onboardingStep || 1;
+  const [currentStep, setCurrentStep] = useState(
+    currentUser?.onboardingStep || 1
+  );
+
+  useEffect(() => {
+    setCurrentStep(currentUser?.onboardingStep || 1);
+  }, [currentUser]);
 
   return (
     <>
-      {currentPage === 1 && <OnboardingStepOne />}
-      {currentPage === 2 && <OnboardingStepTwo />}
-      {currentPage === 3 && <OnboardingStepThree />}
-      {currentPage === 4 && <OnboardingStepFour />}
-      {currentPage === 5 && <OnboardingStepFive />}
-      {currentPage === 6 && <OnboardingStepSix />}
+      {currentStep === 1 && <OnboardingStepOne />}
+      {currentStep === 2 && <OnboardingStepTwo />}
+      {currentStep === 3 && <OnboardingStepThree />}
+      {currentStep === 4 && <OnboardingStepFour />}
+      {currentStep === 5 && <OnboardingStepFive />}
+      {currentStep === 6 && <OnboardingStepSix />}
     </>
   );
 }
